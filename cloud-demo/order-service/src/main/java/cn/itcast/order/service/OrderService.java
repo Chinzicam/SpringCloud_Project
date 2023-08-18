@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
+
 @Service
 @Slf4j
 public class OrderService {
 
-    @Autowired
+    @Resource
     private OrderMapper orderMapper;
     @Autowired
     private RestTemplate restTemplate;

@@ -11,11 +11,16 @@ import org.springframework.web.client.RestTemplate;
 public class EurekaConfig {
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    /**
+     * ribbon负载均衡
+     * @return
+     */
     @Bean
-    public IRule randomRule(){
+    public IRule randomRule() {
         return new RandomRule();
     }
 }
