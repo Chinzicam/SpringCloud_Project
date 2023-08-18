@@ -25,8 +25,23 @@ logging:
 #  client:
 #    service-url:
 #      defaultZone: http://127.0.0.1:10086/eureka
+
+user-service: # 给某个微服务配置负载均衡规则，这里是user-service服务  使用代码或者配置文件
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 负载均衡规则
+
 ribbon:
   eager-load:
     enabled: true #开启饥饿加载
     clients:
       - user-service
+
+feign:         # feign自定义配置---日志
+  client:
+    config:
+      user-service: # 针对某个微服务的配置,这里用default就是全局配置，如果是写服务名称，则是针对某个微服务的配置
+        loggerLevel: BASIC #  日志级别
+  httpclient:       # fegin性能优化
+    enabled: true # 开启feign对HttpClient的支持
+    max-connections: 200 # 最大的连接数
+    max-connections-per-route: 50 # 每个路径的最大连接数

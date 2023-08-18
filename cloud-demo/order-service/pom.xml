@@ -37,6 +37,29 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!-- Feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!--Feign的性能优化=>httpClient的依赖 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
+<!--        Fegin实现基于抽取的最佳实践-->
+        <dependency>
+            <groupId>cn.itcast.demo</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+<!--            引入feign-api项目-->
+        <dependency>
+            <groupId>cn.itcast.demo</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>1.0</version>
+        </dependency>
 
     </dependencies>
     <build>

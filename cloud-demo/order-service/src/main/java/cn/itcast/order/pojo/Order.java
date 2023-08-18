@@ -1,5 +1,6 @@
 package cn.itcast.order.pojo;
 
+import cn.itcast.feign.pojo.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

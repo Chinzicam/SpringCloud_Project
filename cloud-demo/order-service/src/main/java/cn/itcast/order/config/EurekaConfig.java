@@ -1,7 +1,7 @@
 package cn.itcast.order.config;
 
+import com.alibaba.cloud.nacos.ribbon.NacosRule;
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,12 +15,12 @@ public class EurekaConfig {
         return new RestTemplate();
     }
 
-    /**
-     * ribbon负载均衡
-     * @return
-     */
-    @Bean
-    public IRule randomRule() {
-        return new RandomRule();
-    }
+//    /**
+//     * ribbon负载均衡规则 代码或者配置文件
+//     * @return
+//     */
+//    @Bean
+//    public IRule nacosRule() {
+//        return new NacosRule();
+//    }
 }

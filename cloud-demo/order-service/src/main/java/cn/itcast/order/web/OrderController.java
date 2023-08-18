@@ -2,7 +2,6 @@ package cn.itcast.order.web;
 
 import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
-import cn.itcast.order.pojo.User;
 import cn.itcast.order.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
