@@ -24,4 +24,13 @@ public class UserController {
     public User queryById(@PathVariable("id") Long id) {
         return userService.queryById(id);
     }
+
+    /**
+     * 路由过滤器测试，这里的any是gateway传入配置变量
+     * @param word
+     */
+    @GetMapping("/test")
+    public void test(@RequestHeader("any") String word) {
+        System.out.println(word);
+    }
 }
